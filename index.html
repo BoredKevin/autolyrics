@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLyrics</title>
+    <script src="https://cdn.jsdelivr.net/npm/liricle"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/satoshi.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AutoLyrics</h1>
+        <div class="shortdesc">
+            <p>This website allows you to listen and sing along to any song you like! Just upload an audio file and it will automatically find the lyrics for you!</p>
+            <p>Not working?<br>Make sure your files are named using the "Artist Name - Song Name" format!</p>
+        </div>
+        <input type="file" id="audioInput" accept="audio/*">
+        <div class="controls">
+            <audio id="player" controls></audio>
+            <div>
+                <label>offset (ms):</label>
+                <input type="number" id="offset" value="0" step="100">
+                <button onclick="applyOffset()">Apply</button>
+            </div>
+        </div>
+        <div id="lyrics"></div>
+        <div id="error" style="color: red;"></div>
+        <p class="footer">AutoLyrics (Proof of Concept)<br><a href="//github.com/boredkevin/autolyrics">View source</a></p>
+    </div>
+    <button onclick="themeToggle()">Toggle (broken don't use)</button>
+    
+    <script src="assets/js/script.js"></script>
+    <script>
+        function themeToggle() {
+            document.documentElement.style.cssText = "--bg: #fff";
+            document.documentElement.style.cssText = "--text: #000";
+        }
+        </script>        
+</body>
+</html>
